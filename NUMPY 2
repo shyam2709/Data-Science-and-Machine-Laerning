@@ -1,0 +1,179 @@
+print("Welcome to Numpy 2")
+
+import numpy as np
+
+a=np.arange(1,11)
+a
+
+a[::2]
+
+a[[1,4,6]]
+
+a[::-2]
+
+a[6:2:-1]
+
+a[-4:-8:-1]
+
+a[[2,5,6]]
+
+a=np.arange(1,21).reshape(5,4)
+
+a
+
+a[::2,::2]
+
+a[[0,2,4], : : 2]
+
+a[2,2]
+
+c=np.array([1,2,3,4,5,6,7,8,9,10]).reshape((2,5))
+
+c.shape
+
+a=np.array([1,2,3,4,5,6,7])
+a[4:] = 10
+a
+
+a+5
+
+a[2:4] = 20
+a
+
+d=np.arange(12).reshape(3,4)
+d
+
+d+5
+
+d<5
+
+mask=d<7
+print(mask)
+
+d[mask]
+
+d[d%5==0]
+
+mask = (d%3==0)
+
+d[mask]
+
+d[d%1==0].reshape(2,-1)
+
+mask=((d%2==0)|(d%3==0))
+
+d[mask]
+
+a=np.array([0,1,2,3,4,5])
+mask  = (a%2 == 0)
+a[mask] = -1
+a
+
+f=np.arange(11,16)
+g=np.arange(1,6)
+f+g
+
+f*g
+
+f/g
+
+f-g
+
+arr=np.arange(1,31).reshape(5,6)
+
+np.sum(arr)
+
+**Axis** 
+For horizontal direction axis will be 1 and for vertical 0
+
+
+arr
+
+np.sum(arr,axis=0)
+
+np.sum(arr,axis=1)
+
+np.min(arr,axis = 0)
+
+np.max(arr,axis=0)
+
+np.avg(arr,axis = 0)
+
+import numpy as np
+
+np.ones(4)
+
+np.full((3,4),5.0)
+
+np.full((8,4),6)
+
+np.identity(6)
+
+np.eye(6)
+
+np.eye(10,6)
+
+np.identity(4,10)
+
+np.identity(4)*3
+
+np.diag([2,5,74,232,64,4656])
+
+np.diag?
+
+np.diag(np.arange(1,11))
+
+g=np.array([1,2,3,4,5])
+h=np.array([4,4,56,7,78])
+g<h
+
+i=np.array([34,342,84,85,92])
+j=np.array([45,52,62,72,72])
+i>j
+
+np.any(i>j)
+
+np.all(i>j)
+
+k=np.array([34,363,3])
+l=np.array([23,34,22])
+
+k>=l
+
+m=np.array([0, 1, 2, 3, 4, 5])
+
+first=m[0]
+second=m[-1]
+print(first)
+print(second)
+
+X = np.arange(12).reshape(3,4)
+
+X.max(axis=1)
+
+X.T.max(axis=0)
+
+[i.min() for i in X]
+
+
+
+X.sum()
+
+import numpy as np
+def calculate_mean_age(birds, age):
+    '''
+    INPUT: birds, age -> 1D array
+    OUPUT: mean_age -> float variable
+    '''
+    mean_age = None
+    ## STEP1. Create mask to get Crane birds from birds array
+    mask = [birds == 'Cranes']
+    ## STEP2. Get the age of crane birds  
+    crane_ages = age[mask]
+    ## STEP 3. Calculate mean age of crane birds
+    mean_age = np.mean(crane_ages)
+    ## STEP 4. Round off the mean age to 2 decimal points
+    mean_age = np.round(mean_age,2)
+    return mean_age
+
+calculate_mean_age(['spoonbills','plovers','plovers','plovers','plovers','Cranes','plovers','plovers','Cranes','spoonbills'],['5.5', '6.0', '3.5', '1.5', '3.0', '4.0', '3.5', '2.0', '5.5', '6.0'])
