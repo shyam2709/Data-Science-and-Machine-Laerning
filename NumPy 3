@@ -1,0 +1,124 @@
+print("Welcome to Numpy3")
+
+import numpy as np
+
+a=np.arange(1,21).reshape(5,4)
+print(a)
+
+b=np.arange(21,41).reshape(5,4)
+np.add(a,b)
+
+c=np.array([34,342,35,242,21,10])
+c
+
+
+Sorting
+
+d=np.sort(c)
+print(d)
+
+e=np.array([64,282,72,73,62,94,13,15])
+
+e.sort()
+
+e
+
+print(e)
+
+f=np.array([64,282,72,73,62,94,13,15])
+
+np.sort(f)
+
+argsort()
+
+import numpy as np
+
+f=np.array([64,282,72,73,62,94,13,15])
+
+np.argsort(f)
+
+np.max(f)
+
+np.argmax(f)
+
+np.argmin(f)
+
+g=np.array([[24,21,75],[54,22,14],[93,37,25]])
+
+g
+
+np.sort(g)
+
+np.sort(g,axis=0)
+
+np.argsort(g,axis=0)
+
+import numpy as np
+
+data=np.loadtxt("\gdown",dtype = "str")
+
+**As file is not being loaded so it is not done here, refer the notes provided by trainer, next part is below**
+
+1.np.dot
+2.np.matmul
+3.@
+
+import numpy as np
+arr1 = np.array([[1,2], [3,4]])
+arr2 = np.array([[1], [2]])
+np.dot(arr1, arr2)
+
+import numpy as np
+
+a=np.array([5,3,9])
+
+b=np.argsort(a)
+
+b
+
+c=a[b]
+print(c)
+
+np.matmul(a,b)
+
+np.dot(a,b)
+
+a@b
+
+np.dot(4,5)
+
+c=np.arange(1,21).reshape(5,4)
+d=np.arange(1,33).reshape(4,8)
+
+np.dot(c,d)
+
+#np.tile()
+
+
+e=np.arange(1,13).reshape(3,4)
+
+np.tile(e,(2,3))
+
+f=np.identity(5)
+f
+
+g=np.full((3,3),5.0)
+g
+
+h=np.ones((3,3))
+h
+
+
+h=h+5
+h
+
+i=np.zeros((3,3))
+i
+
+i=i*5
+i
+
+j=np.array([1,2,3,4,5])
+k=np.array([8,7,6])
+j[2:]=k[::-1]
+print(j)
