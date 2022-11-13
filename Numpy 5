@@ -1,0 +1,76 @@
+print("Welcome to Numpy 5")
+
+#Splitting
+
+import numpy as np
+a = np.arange(1,29).reshape(7,4)
+a
+
+np.split(a,[2,3],axis = 1)
+
+np.split(a,[3,6,7],axis = 0)
+
+np.vsplit(a,[3,6,7])
+
+#Concatenate
+
+
+
+2 processes 
+1.concatenate
+2.hstack() and vstack()
+
+
+b=np.arange(1,5)
+c=np.arange(3,7)
+
+np.concatenate([b,c])
+
+np.concatenate([b,c],axis=0)
+
+np.concatenate([b,c],axis=1)
+
+d=np.arange(1,13).reshape(4,3)
+e=np.arange(13,29).reshape(4,4)
+d
+
+e
+
+np.concatenate([d,e])
+
+np.concatenate([d,e],axis=0)
+
+np.concatenate([d,e],axis=1)
+
+#hstack and vstack
+
+import numpy as np
+g=np.arange(1,6)
+h=np.arange(6,11)
+
+np.hstack([g,h])
+
+#Broadcadting
+
+import numpy as np
+i=np.array([10,20,30,40])
+j=np.array([1,2,3])
+print(i.shape)
+print(j.shape)
+print(i.ndim)
+print(j.ndim)
+
+k=np.array([10,20])
+l=np.array([1,2,3,4,5,6]).reshape(3,2)
+k+l
+
+import numpy as np
+x = np.array([[200,200,200],[300,300,300],[400,400,400]])
+v = np.array([200,300,400])
+print((x / v[::,::]))
+
+import numpy as np
+X = np.arange(12).reshape((3, 4))
+row = np.array([0, 1, 2])
+mask = np.array([1, 0, 1, 0], dtype=bool)
+print(X[row[::], mask])
